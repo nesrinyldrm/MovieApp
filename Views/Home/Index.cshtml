@@ -1,0 +1,32 @@
+﻿@model IEnumerable<Movie>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+   My Movie App projene hoş geldin
+</div>
+<div class="mt-5 row">
+    <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Description</th>
+      <th scope="col">ImageUrl</th>
+    </tr>
+  </thead>
+  <tbody>
+      @foreach (var item in Model)
+      {
+            <tr>
+                    <th scope="row">@item.ID</th>
+                    <td>@item.Name</td>
+                    <td>@item.Description</td>
+                    <td>@item.ImageUrl</td>
+            </tr>
+      }
+
+  </tbody>
+</table>
+</div>
